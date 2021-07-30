@@ -7,9 +7,17 @@ public class ScoreManager : MonoBehaviour
 {
     public Animator text;
     public TextMeshProUGUI scoreText;
+
+    public TextMeshProUGUI highScoreText;
+
+    public TextMeshProUGUI logbookHighScoreText;
     static public float score;
 
+    static public float highScore;
+
     public GameObject RhythmGameMapper;
+
+    public float realerScore;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +26,14 @@ public class ScoreManager : MonoBehaviour
         {
             score = 0;
         }
+
+        highScore = PlayerPrefs.GetFloat("High Score", 0);
         
         scoreText.SetText(score.ToString());
+
+        highScoreText.SetText("High Score: " + highScore);
+        logbookHighScoreText.SetText(highScore.ToString());
+        highScoreText.SetText(highScore.ToString());
         //RhythmGameMapper.SetActive(false);
     }
 
@@ -31,7 +45,6 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public void AddScore()
@@ -53,5 +66,14 @@ public class ScoreManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         RhythmGameMapper.SetActive(true);
+    }
+
+    public void SaveScore()
+    {
+        if (score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetFloat("High Score", highScore);
+        }
     }
 }
