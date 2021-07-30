@@ -85,8 +85,7 @@ public class Logbook : MonoBehaviour
 
     public void RestartGame()
     {
-        ScoreManager.score = 0;
-        SceneManager.LoadScene("GamePlay");
+        StartCoroutine(restart());
     }
 
     public void SwitchToPauseTab()
@@ -157,11 +156,18 @@ public class Logbook : MonoBehaviour
 
     IEnumerator ReturnToMenu()
     {
-        Time.timeScale = 1f;
-        yield return new WaitForSeconds(1f);
         black.SetBool("FadeOut", true);
         rhythmGameMapper.Resume22();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
+        SceneManager.LoadScene("Menu");
+    }
+
+    IEnumerator restart()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        black.SetBool("FadeOut", true);
+        rhythmGameMapper.Resume22();
+        yield return new WaitForSecondsRealtime(1);
         SceneManager.LoadScene("Menu");
     }
 }

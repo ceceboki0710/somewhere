@@ -929,11 +929,10 @@ RectTransform:
   - {fileID: 617604093}
   - {fileID: 1891339308}
   - {fileID: 1076982254}
+  - {fileID: 1142902044}
   - {fileID: 1337741865}
-  - {fileID: 1871162164}
   - {fileID: 839761180}
   - {fileID: 2128660565}
-  - {fileID: 1142902044}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1216,6 +1215,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400934328}
   m_CullTransparentMesh: 1
+--- !u!1 &477429156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477429157}
+  m_Layer: 0
+  m_Name: filler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477429157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477429156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2483032, y: -1.1200483, z: -242.10414}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527294346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1599,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2128660566}
+      - m_Target: {fileID: 839761181}
         m_TargetAssemblyTypeName: Logbook, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -3645,7 +3674,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2128660566}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Logbook, Assembly-CSharp
         m_MethodName: ReturnToMainMenu
         m_Mode: 1
@@ -4096,7 +4125,7 @@ MonoBehaviour:
   birdsTab: {fileID: 1038261860}
   bookLog: {fileID: 839761184}
   audioSource: {fileID: 620257553}
-  black: {fileID: 0}
+  black: {fileID: 1871162165}
   buttonClick1: {fileID: 8300000, guid: 1bb4b2f3f6504f04f8fbf76d7ead50fd, type: 3}
   buttonClick2: {fileID: 8300000, guid: bea0458efe2d8e845a61f9f46c239667, type: 3}
   buttonClick3: {fileID: 8300000, guid: 58b95f29883e4d44d91291cd16a0165a, type: 3}
@@ -4600,7 +4629,7 @@ MonoBehaviour:
     beatRest: 1
     timeRest: 0
   - beatsBtwWave: 1
-    eventType: 13
+    eventType: 5
     noOfEvents: 1
     songPositionWave: 0
     beatMode: 1
@@ -4608,22 +4637,22 @@ MonoBehaviour:
     beatRest: 1
     timeRest: 0
   - beatsBtwWave: 2
-    eventType: 16
+    eventType: 2
     noOfEvents: 1
     songPositionWave: 0
     beatMode: 1
     timeMode: 0
     beatRest: 1
     timeRest: 0
-  - beatsBtwWave: 1
-    eventType: 14
+  - beatsBtwWave: 0
+    eventType: 1
     noOfEvents: 1
     songPositionWave: 0
     beatMode: 1
     timeMode: 0
     beatRest: 1
     timeRest: 0
-  - beatsBtwWave: 1
+  - beatsBtwWave: 0
     eventType: 0
     noOfEvents: 1
     songPositionWave: 0
@@ -4632,32 +4661,32 @@ MonoBehaviour:
     beatRest: 1
     timeRest: 0
   - beatsBtwWave: 1
-    eventType: 0
+    eventType: 6
     noOfEvents: 1
     songPositionWave: 0
     beatMode: 1
     timeMode: 0
     beatRest: 1
     timeRest: 0
-  - beatsBtwWave: 1
-    eventType: 0
+  - beatsBtwWave: 3
+    eventType: 4
     noOfEvents: 1
     songPositionWave: 0
     beatMode: 1
     timeMode: 0
     beatRest: 1
     timeRest: 0
-  - beatsBtwWave: 1
-    eventType: 0
+  - beatsBtwWave: 2
+    eventType: 7
     noOfEvents: 1
     songPositionWave: 0
     beatMode: 1
     timeMode: 0
     beatRest: 1
     timeRest: 0
-  - beatsBtwWave: 1
+  - beatsBtwWave: 0
     eventType: 0
-    noOfEvents: 1
+    noOfEvents: 0
     songPositionWave: 0
     beatMode: 1
     timeMode: 0
@@ -5397,7 +5426,7 @@ MonoBehaviour:
   nextBeatsBtwWave: 0
   nextTimeBtwWave: 0
   callBackNumber: 0
-  beatsPerSecond: 120
+  beatsPerSecond: 121
   beatsPerMeasure: 4
   secPerBeat: 0
   secPerMeasure: 0
@@ -5411,7 +5440,7 @@ MonoBehaviour:
   beatThresholdLate: 1
   beatThresholdEarly: 1
   dspSongTime: 0
-  firstBeatOffset: 0.1
+  firstBeatOffset: 0.45
   musicSource: {fileID: 944396418}
   metronome_audioSrc: {fileID: 1329761523}
   secPerRealBeat: 0
@@ -5428,8 +5457,8 @@ MonoBehaviour:
   autoPlay: 1
   randomBirdnumber: 0
   nextEventRandom: 0
-  sound3: {fileID: 8300000, guid: 2ef607a5ae31bca4b84bf3b798fc045e, type: 3}
-  sound5: {fileID: 8300000, guid: b866f04c2a3dba94690168fd8681bd1d, type: 3}
+  sound3: {fileID: 8300000, guid: 24d5cad3e983d6b4e8d20523696124b6, type: 3}
+  sound5: {fileID: 8300000, guid: ebaf6796d2c74e043b47d5e4f4dfcb2b, type: 3}
   sound1: {fileID: 8300000, guid: 1cb1fd369671f7341b18278b4a4bd0dc, type: 3}
   sound2: {fileID: 8300000, guid: f75909b451af45e46ac766ba37253f9c, type: 3}
   sound4: {fileID: 8300000, guid: 6654f556686a74140877c41e483f9c3c, type: 3}
@@ -5499,6 +5528,13 @@ MonoBehaviour:
   minDouble: 0.3
   maxDouble: 0.5
   imTired: 1
+  cryAboutIt: 0
+  bopSpawn: {fileID: 0}
+  bop: []
+  parent: {fileID: 477429156}
+  parent2: {fileID: 477429156}
+  parent3: {fileID: 477429156}
+  parent4: {fileID: 477429156}
   beatsInLoop: 0
 --- !u!82 &944396418
 AudioSource:
@@ -5510,7 +5546,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8040312823056929966, guid: 4bff8c5f2e9a60f47b9ec3c8f19e39ef, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f0140cd6d126d2042a139bd0b172a632, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7e21de8b5a31c2244a4cdf3facca0e11, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.219
   m_Pitch: 1
@@ -5585,7 +5621,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.0016536713
       value: 1
       inSlope: 0
       outSlope: 0
@@ -7282,12 +7318,12 @@ RectTransform:
   m_Children:
   - {fileID: 1524929336}
   m_Father: {fileID: 364437268}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: 85}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -121.5, y: 94.2}
+  m_SizeDelta: {x: 25.9, y: 23.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142902045
 MonoBehaviour:
@@ -7309,7 +7345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1116310467891366001, guid: 21a9ee83578d52c42b61acdb41cede2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 184053efa60b3644a91708b38cc95601, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8069,7 +8105,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1804101270163716324, guid: 4bff8c5f2e9a60f47b9ec3c8f19e39ef, type: 2}
   m_audioClip: {fileID: 8300000, guid: 054a28beb76c2cd47acc56a2889d08fa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.377
+  m_Volume: 0.317
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8197,8 +8233,9 @@ RectTransform:
   m_Children:
   - {fileID: 1079889113}
   - {fileID: 1539525820}
+  - {fileID: 1871162164}
   m_Father: {fileID: 364437268}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9237,7 +9274,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524929335}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9246,7 +9283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45, y: -7}
+  m_AnchoredPosition: {x: 5.98, y: -16.19999}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524929337
@@ -9269,7 +9306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x 3
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d97cd52f6f6ec4b4ea0245a1128ea0e9, type: 2}
   m_sharedMaterial: {fileID: -2934488809292201275, guid: d97cd52f6f6ec4b4ea0245a1128ea0e9, type: 2}
@@ -10199,16 +10236,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871162163}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.64935064, y: 0.64935064, z: 1}
   m_Children: []
-  m_Father: {fileID: 364437268}
-  m_RootOrder: 4
+  m_Father: {fileID: 1337741865}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 4.8701463, y: 5.142857}
   m_SizeDelta: {x: 419.23, y: 253.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1871162165
@@ -11740,7 +11777,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128660565}
-  - component: {fileID: 2128660566}
   m_Layer: 0
   m_Name: Game Over Screen
   m_TagString: Untagged
@@ -11765,31 +11801,6 @@ Transform:
   m_Father: {fileID: 364437268}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2128660566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128660564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f50d44166743c489c97697735595ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rhythmGameMapper: {fileID: 0}
-  pauseTab: {fileID: 0}
-  birdsTab: {fileID: 0}
-  bookLog: {fileID: 0}
-  audioSource: {fileID: 0}
-  black: {fileID: 0}
-  buttonClick1: {fileID: 0}
-  buttonClick2: {fileID: 0}
-  buttonClick3: {fileID: 0}
-  BlueJay: {fileID: 0}
-  cardinal: {fileID: 0}
-  bullFinch: {fileID: 0}
-  highScoreText: {fileID: 0}
 --- !u!1 &6800759637744309614
 GameObject:
   m_ObjectHideFlags: 0

@@ -255,7 +255,7 @@ public class MappingCode : MonoBehaviour
                     rhythms.Events[rhythms.currentEventNumber+ 1].timeMode = false;
                     rhythms.Events[rhythms.currentEventNumber+ 1].beatRest = true;
                     rhythms.Events[rhythms.currentEventNumber+ 1].timeRest = false;
-                    rhythms.Events[rhythms.currentEventNumber+ 2].beatsBtwWave = 2;
+                    rhythms.Events[rhythms.currentEventNumber+ 2].beatsBtwWave = 1;
                     rhythms.Events[rhythms.currentEventNumber+ 2].eventType = 16;
                     rhythms.Events[rhythms.currentEventNumber+ 2].noOfEvents = 1;
                     rhythms.Events[rhythms.currentEventNumber+ 2].beatMode = true;

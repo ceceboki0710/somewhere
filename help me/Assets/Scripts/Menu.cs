@@ -7,6 +7,16 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
+
+    public GameObject hey;
+
+    public GameObject hey2;
+
+    public GameObject hey3;
+
+    public GameObject hey4;
+
+    public GameObject black;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +31,51 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        ScoreManager.score = 0;
-        SceneManager.LoadScene("GamePlay");
+        StartCoroutine(play());
     }
 
     public void ExitGame()
     {
-        Application.Quit();
+       StartCoroutine(quit());
+    }
+
+    IEnumerator quit()
+    {
+        black.SetActive(true);
+        yield return new WaitForSeconds(1);
+         Application.Quit();
+    }
+
+     IEnumerator play()
+    {
+        black.SetActive(true);
+        yield return new WaitForSeconds(1);
+         ScoreManager.score = 0;
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void QuitPressed()
+    {
+        hey.SetActive(false);
+        hey2.SetActive(true);
+    }
+
+    public void QuitNotPressed()
+    {
+         hey.SetActive(true);
+        hey2.SetActive(false);
+    }
+
+    public void PlayNotPressed()
+    {
+        hey3.SetActive(true);
+        hey4.SetActive(false);
+        Debug.Log("huh");
+    }
+
+    public void PlayPressed()
+    {
+         hey3.SetActive(false);
+         hey4.SetActive(true);
     }
 }
